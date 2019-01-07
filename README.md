@@ -1,12 +1,19 @@
 # Create-Dataset-With-Any-Dimensions
 Dataset creator file for mainly 4D numpy arrays to manage 3D data.
 # Folder structure
+
 #-input_data
+
 #--label1
+
 #---class1data1
+
 #---class1data2
+
 #---class1data3
+
 #... (similarly all data of label 1 goes like that)
+
 #--label2
 #---class2data1
 #---class2data2
