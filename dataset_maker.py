@@ -37,7 +37,7 @@ data_dim1= # 1st dimension of your data
 data_dim2= # 2nd dimension of your data
 data_dim3= # 3rd dimension of your data
 channels = 1 # 1: Grayscale, 3: RGB
-labels = 2 # how many classes in dataset?
+label_counts = 2 # how many classes in dataset?
 test_ratio = 0.2 # split 20% of data as test set the 80 % would be the training set
 input_folder = 'alldata'
 data_folder = 'data1'
@@ -66,7 +66,7 @@ X = X.reshape(X.shape[0], X.shape[1], X.shape[2], X.shape[3])  #I know X.shape[3
 # instead of providing additional dimensions if data in its form 
 Y = np.array(Y).astype('float32')
 #print(Y.shape)
-Y = to_categorical(Y, labels)
+Y = to_categorical(Y, label_counts)
 if not os.path.exists(data_folder+'/'):
     os.makedirs(data_folder+'/')
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=test_ratio, random_state=42)
